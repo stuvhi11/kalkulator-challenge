@@ -4,26 +4,29 @@ class Program
 {
     static void Main()
     {
-        string ulang = "";
-        Console.Write(
-                "Selamat Datang di Program Perhitungan" +
-                "\nMenu Operasi (+, -, *, :)" +
-                "\n(angka)(operasi)(angka)=" +
-                "\nInput Operasi : "
-            );
+        int hasil = 0;
+        Console.Write("\nInputkan Operasi : ");
+        while (true)
+        {
 
         string input = Console.ReadLine().Replace(" ", "");
-        int hasil = 0, hasil1;
+        char[] operasi = { '+', '-', '*', ':' };
+        int tempat = input.IndexOfAny(operasi);
+        int a1 = 0, a2 = 0;
 
-        if (input.EndsWith("="))
+        if (tempat == 0)
         {
-            char[] operasi = { '+', '-', '*', ':' };
-            int posisi = input.IndexOfAny(operasi);
-            int posisisd = input.IndexOf('=');
-            int pp = input.Length - (posisi + 1) - 1;
-            int a1 = Convert.ToInt32(input.Substring(0, posisi));
-            int a2 = Convert.ToInt32(input.Substring(posisi + 1, pp));
-            char execute = input[posisi];
+            //int tempatsd = input.IndexOf('=');
+            a1 = hasil;
+            int pp = input.Length - (tempat + 1) - 1;
+            a2 = Convert.ToInt32(input.Substring(tempat + 1, pp));
+        }else
+        {
+            a1 =Convert.ToInt32(input.Substring(0, tempat));
+            int pp = input.Length - (tempat + 1) - 1;
+            a2 = Convert.ToInt32(input.Substring(tempat + 1, pp));
+        }
+            char execute = input[tempat];
 
             switch (execute)
             {
@@ -48,54 +51,47 @@ class Program
                     Console.Write($"{hasil} ");
                     break;
                 default:
-                    Console.Write("Maaf yang anda inputkan tidak tersedia");
+                    Console.WriteLine("Maaf yang anda inputkan tidak tersedia");
                     break;
             }
-
-            while (true)
-            {
-                string lanjut = Console.ReadLine();
-                string[] Lanjut = lanjut.Split(operasi);
-                int posisi1 = lanjut.IndexOfAny(operasi);
-                char Operasi = lanjut[posisi1];
-
-                switch (Operasi)
-                {
-                    case '+':
-                        int alanjut = int.Parse(Lanjut[1]);
-                        hasil1 = hasil + alanjut;
-                        Console.Write($"{hasil1}");
-                        break;
-                    case '-':
-                        alanjut = int.Parse(Lanjut[1]);
-                        hasil1 = hasil - alanjut;
-                        Console.Write($"{hasil1}");
-                        break;
-                    case '*':
-                        alanjut = int.Parse(Lanjut[1]);
-                        hasil1 = (hasil * alanjut);
-                        Console.Write($"{hasil1}");
-                        break;
-                    case '/':
-                    case ':':
-                        alanjut = int.Parse(Lanjut[1]);
-                        hasil1 = hasil / alanjut;
-                        Console.Write($"{hasil1}");
-                        break;
-                    default:
-                        Console.Write("\nPilihan anda tidak tersedia");
-                        break;
-                }
-
-
-            }
-        }
-        else
-        {
-
-            Console.Write("beri tanda = ");
-
         }
 
+            //     switch (Operasi)
+            //     {
+            //         case '+':
+            //             int alanjut = int.Parse(Lanjut[1]);
+            //             hasil1 = hasil + alanjut;
+            //             Console.Write($"{hasil1}");
+            //             break;
+            //         case '-':
+            //             alanjut = int.Parse(Lanjut[1]);
+            //             hasil1 = hasil - alanjut;
+            //             Console.Write($"{hasil1}");
+            //             break;
+            //         case '*':
+            //             alanjut = int.Parse(Lanjut[1]);
+            //             hasil1 = (hasil * alanjut);
+            //             Console.Write($"{hasil1}");
+            //             break;
+            //         case '/':
+            //         case ':':
+            //             alanjut = int.Parse(Lanjut[1]);
+            //             hasil1 = hasil / alanjut;
+            //             Console.Write($"{hasil1}");
+            //             break;
+            //         default:
+            //             Console.Write("\nPilihan anda tidak tersedia");
+            //             break;
+            //     }
+
+
+            // }
     }
+        // else
+        // {
+
+        //     Console.Write("beri tanda = ");
+
+        // }
+
 }
