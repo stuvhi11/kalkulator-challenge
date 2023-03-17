@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\hildatok\\dotnet\\kalkulator-challenge2\\Model-String-Symbol.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Documents\\hildatok\\dotnet\\kalkulator-challenge2\\ver1\\Model-String-Symbol.csproj",
       "projectName": "Model-String-Symbol",
-      "projectPath": "C:\\Users\\LENOVO\\Documents\\hildatok\\dotnet\\kalkulator-challenge2\\Model-String-Symbol.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Documents\\hildatok\\dotnet\\kalkulator-challenge2\\ver1\\Model-String-Symbol.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Documents\\hildatok\\dotnet\\kalkulator-challenge2\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Documents\\hildatok\\dotnet\\kalkulator-challenge2\\ver1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
